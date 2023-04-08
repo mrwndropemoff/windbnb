@@ -5,8 +5,20 @@ export default function Home(props) {
   return (
     <div className="flex flex-col my-5">
       <img src={data.photo} className="w-full h-[267px] rounded-3xl" />
-      <div className="flex flex-row my-5">
-        <p className="flex-1 font-medium text-sm text-gray ">{data.type}</p>
+      <div className="flex flex-row my-5 justify-center items-center">
+        {data.superHost ? (
+          <p className="border-[1px] border-[#4F4F4F] rounded-xl h-7 w-24 flex items-center justify-center mr-3 font-bold text-xs text-[#4F4F4F]">
+            SUPER HOST
+          </p>
+        ) : null}
+        <div className="flex-1 ">
+          <div className="flex items-center text-gray text-sm">
+            <p className="flex font-medium">{data.type}</p>
+            {data.beds && (
+              <p className="ml-1 items-center">. {data.beds} beds</p>
+            )}
+          </div>
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -23,7 +35,7 @@ export default function Home(props) {
         </svg>
         <p className="font-medium text-sm text-rating-gray">{data.rating}</p>
       </div>
-      <p className="font-semibold text-base">{data.title}</p>
+      <p className="font-bold text-base">{data.title}</p>
     </div>
   );
 }
