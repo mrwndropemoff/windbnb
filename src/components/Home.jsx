@@ -3,7 +3,7 @@ import React from "react";
 export default function Home(props) {
   const { data } = props;
   return (
-    <div className="flex flex-col my-5">
+    <div className="flex flex-col my-5 w-full">
       <img src={data.photo} className="w-full h-[267px] rounded-3xl" />
       <div className="flex flex-row my-5 justify-center items-center">
         {data.superHost ? (

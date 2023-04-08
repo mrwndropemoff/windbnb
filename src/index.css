@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,5 +7,18 @@
 @layer base {
   html {
     font-family: "Montserrat", sans-serif;
+  }
+  #search::placeholder {
+    font-size: 14px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    color: #bdbdbd;
+  }
+  #searchCountry::placeholder {
+    font-size: 14px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    color: #333333;
+    @apply text-black;
   }
 }
